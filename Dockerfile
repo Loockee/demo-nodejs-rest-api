@@ -4,6 +4,7 @@ FROM node:17 as builder
 WORKDIR /usr/src/app
 RUN npm i -g npm
 COPY . .
+RUN npm ci
 
 ENTRYPOINT ["sbin/tini", "--"]
 
