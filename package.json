@@ -1,0 +1,28 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "fastify": "^3.27.1",
+    "redis": "^4.0.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "autocannon": "^7.6.0",
+    "chai": "^4.3.6",
+    "chai-spy": "^0.0.1",
+    "mocha": "^9.2.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
