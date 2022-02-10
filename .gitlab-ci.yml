@@ -7,7 +7,7 @@ stages:
 build:
   stage: build
   image: node:lts-stretch
-  scripts:
+  script:
     - echo "building ..."
     - npm -v
     - npm ci
