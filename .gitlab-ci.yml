@@ -1,0 +1,15 @@
+variables:
+  TZ: Rurope/Zurich
+
+stages:
+  - build
+
+build:
+  stage: build
+  image: node:lts-stretch
+  scripts:
+    - echo "building ..."
+    - npm -v
+    - npm ci
+
+# TBC

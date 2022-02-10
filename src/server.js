@@ -15,6 +15,22 @@ const redisClientOptions = {
     url: `redis://${redisHost}:${redisPort}`,
 };
 
+// signal handling
+const signals = {
+    SIGHUP: 1,
+    SIGINT: 2,
+    SIGTERM: 15,
+};
+
+const shutdown = (sig, val) => {
+    console.log('shutdowning application...');
+    server.close(() => {
+	console.log(`Server stopped with signal ${sig} and value ${val}`);
+	process.exit(128 + val);
+    });
+};
+
+// build the application
 const build = (opts = {}) => {
     const app = fastify(opts);
 

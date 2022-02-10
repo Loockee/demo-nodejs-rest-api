@@ -1,6 +1,7 @@
 # Build image
 FROM node:17 as builder
 
+ENV NODE_ENV 'production'
 WORKDIR /usr/src/app
 RUN npm i -g npm
 COPY . .
